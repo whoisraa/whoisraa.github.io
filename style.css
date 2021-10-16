@@ -7,10 +7,6 @@
     --base-red: #cf3865;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -19,6 +15,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', Helvetica, sans-serif;
+    width: 100%;
 }
 
 a {
@@ -83,13 +80,12 @@ a {
 
 #projects .project-tile {
     position: relative;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 0rem 2rem 0rem 2rem;
 }
 
 #projects .project-group {
     margin: auto;
-    width: 800px;
+    width: 70rem;
     display: flex;
 }
 
@@ -149,9 +145,58 @@ footer p {
 }
 
 footer a {
-    color: var(--base-blue-2);
+    color: var(--base-red);
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #navbar {
+        justify-content: center;
+    }
+
+    #navbar a {
+        padding: 1.1rem 1rem 1.1rem 1rem;
+    }
+
+    #welcome-section h1 {
+        font-size: 2rem;
+    }
+
+    #welcome-section p {
+        font-size: 0.8rem;
+    }
+
+    #projects {
+        padding: 2rem 0rem 4rem 0rem;
+    }
+
+    #projects .project-group {
+        flex-direction: column;
+        width: 15rem;
+    }
+
+    #projects .project-tile {
+        margin: 1rem 0.5rem 1rem 0.5rem;
+    }
+
+    #contact {
+        padding: 4rem 2rem 6rem 2rem;
+    }
+
+    footer {
+        padding: 0.2rem 0.5rem;
+    }
+}
+
+@media (min-width: 770px) and (max-width: 1170px) {
+    #projects .project-group {
+        width: 50rem;
+    }
+
+    #projects .project-tile {
+        margin: 1rem 2rem 1rem 2rem;
+    }
 }
